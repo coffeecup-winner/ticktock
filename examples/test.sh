@@ -2,7 +2,7 @@
 
 for i in $(seq 1 5); do
     echo -n "[Iteration $i] "
-    for j in $(seq 1 20); do
+    for j in $(seq 1 200); do
         echo -n .
         sleep 0.05
     done

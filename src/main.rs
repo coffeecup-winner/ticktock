@@ -81,6 +81,7 @@ fn main() {
     });
 
     print!("{}", timer.get_timestamp());
+    print!("\x1b[7l");
     io::stdout().flush().unwrap();
 
     let mut line = String::new();
@@ -117,4 +118,7 @@ fn main() {
         io::stdout().flush().unwrap();
         thread::sleep(Duration::from_millis(15));
     }
+
+    print!("\x1b[7h");
+    io::stdout().flush().unwrap();
 }
